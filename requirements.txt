@@ -5,3 +5,4 @@ notebook
 nbconvert
 ipykernel
 line-bot-sdk
+tqdm

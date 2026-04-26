@@ -24,4 +24,4 @@ jobs:
 
       - name: run notebook
         run: |
-          jupyter nbconvert --to notebook --execute test.ipynb --output output.ipynb
+          jupyter nbconvert --to notebook --execute stock.ipynb --output output.ipynb

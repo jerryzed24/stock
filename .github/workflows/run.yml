@@ -2,7 +2,7 @@ name: run notebook
 
 on:
   schedule:
-    - cron: '41 17 * * 0-6'   # 台灣15:00
+    - cron: '48 17 * * 0-6'   # 台灣15:00
   workflow_dispatch:
 
 jobs:

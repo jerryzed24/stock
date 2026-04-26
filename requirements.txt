@@ -1,0 +1,7 @@
+pandas
+requests
+FinMind
+notebook
+nbconvert
+ipykernel
+line-bot-sdk

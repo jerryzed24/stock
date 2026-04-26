@@ -1,0 +1,27 @@
+name: run notebook
+
+on:
+  schedule:
+    - cron: '18 17 * * 0-6'   # 台灣15:00
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: install packages
+        run: |
+          pip install -r requirements.txt
+          pip install nbconvert ipykernel
+
+      - name: run notebook
+        run: |
+          jupyter nbconvert --to notebook --execute test.ipynb --output output.ipynb
